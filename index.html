@@ -49,7 +49,7 @@
 
         input[type=range] {
             width: 100%;
-            margin: 20px 0;
+            margin: 10px 0;
         }
 
         .converted-amount {
@@ -79,6 +79,13 @@
             font-size: 0.8em;
             color: #777;
         }
+
+        .slider-increment {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.8em;
+            color: #777;
+        }
     </style>
 </head>
 <body>
@@ -97,6 +104,7 @@
             <span>56k</span>
             <span>70k</span>
         </div>
+        <p class="slider-increment">Each increment on the slider is 1400 yen.</p>
         <p class="converted-amount" id="convertedAmount">Converted Amount in USD: $0</p>
         <div class="conversion-guide">
             <p>Quick Conversion Guide:</p>
