@@ -33,12 +33,17 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             margin: 5px 0;
-            font-size: 1.5em;  /* Makes the input fields large enough to avoid zoom on mobile devices */
+            font-size: 1.5em;  
         }
 
         input[type=range] {
             width: 100%;
             margin: 10px 0;
+        }
+
+        .conversion-guide {
+            margin-top: 50px;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -51,6 +56,18 @@
         <input type="number" id="inputYen" value="0" min="0">
         <input type="range" id="yenSlider" min="0" max="100000" value="0">
         <p id="convertedAmount">Converted Amount in USD: $0</p>
+        
+        <div class="conversion-guide">
+            <p>Quick Conversion Guide:</p>
+            <p>$140 Yen = $1 USD</p>
+            <p>$700 Yen = $5 USD</p>
+            <p>$1400 Yen = $10 USD</p>
+            <p>$2800 Yen = $20 USD</p>
+            <p>$7000 Yen = $50 USD</p>
+            <p>$14000 Yen = $100 USD</p>
+            <p>$28300 Yen = $200 USD</p>
+            <p>$71000 Yen = $500 USD</p>
+        </div>
     </div>
     <script>
         document.getElementById('rate').addEventListener('change', convert);
