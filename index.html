@@ -7,56 +7,81 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .container {
+            width: 100%;
+            max-width: 600px;
             background-color: #fff;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
         }
 
         h1 {
             color: #333;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         label {
             display: block;
-            margin: 10px 0;
+            font-weight: bold;
+            margin: 20px 0 10px;
+            color: #666;
         }
 
         input[type=number] {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            margin: 5px 0;
-            font-size: 1.5em;  
+            font-size: 1.1em;
+            box-sizing: border-box;
         }
 
         input[type=range] {
             width: 100%;
-            margin: 10px 0;
+            margin: 20px 0;
+        }
+
+        .converted-amount {
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
         }
 
         .conversion-guide {
-            margin-top: 50px;
-            font-size: 1.2em;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .conversion-guide p {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>JPY to USD Converter</h1>
-        <label for="rate">Conversion Rate: </label>
+        <label for="rate">Conversion Rate:</label>
         <input type="number" id="rate" value="0.007071" min="0" step="0.000001">
-        <label for="inputYen">Amount in Yen: </label>
+        <label for="inputYen">Amount in Yen:</label>
         <input type="number" id="inputYen" value="0" min="0">
         <input type="range" id="yenSlider" min="0" max="100000" value="0">
-        <p id="convertedAmount">Converted Amount in USD: $0</p>
-        
+        <p class="converted-amount" id="convertedAmount">Converted Amount in USD: $0</p>
         <div class="conversion-guide">
             <p>Quick Conversion Guide:</p>
             <p>$140 Yen = $1 USD</p>
